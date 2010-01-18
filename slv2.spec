@@ -2,7 +2,7 @@ Summary:	LV2 host library
 Summary(pl.UTF-8):	Biblioteka LV2
 Name:		slv2
 Version:	0.6.6
-Release:	0.2
+Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://download.drobilla.net/%{name}-%{version}.tar.bz2
