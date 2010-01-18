@@ -9,22 +9,24 @@ Source0:	http://download.drobilla.net/%{name}-%{version}.tar.bz2
 # Source0-md5:	b8e8e0e82dd04324fcd533e8acd1ce85
 URL:		http://drobilla.net/software/slv2
 BuildRequires:	doxygen
-BuildRequires:	python
+BuildRequires:	jack-audio-connection-kit-devel >= 0.107.0
 BuildRequires:	lv2core-devel >= 1.0
 BuildRequires:	pkgconfig
+BuildRequires:	python
+BuildRequires:	python-modules
 BuildRequires:	redland-devel >= 1.0.6
-BuildRequires:	jack-audio-connection-kit-devel >= 0.107.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 A host library to make LV2 plugin use as simple as possible.
 
-SLV2 is a library to make the use of LV2 plugins as simple as possible for 
-applications. It is written in standard C using the Redland RDF toolkit. The 
-Data (RDF) and code (shared library) functionality in SLV2 is strictly
-separated so it is simple to control where each is used (e.g. it is possible
-to discover/investigate plugins and related data without loading any shared 
-libraries, avoiding the associated risks)
+SLV2 is a library to make the use of LV2 plugins as simple as possible
+for applications. It is written in standard C using the Redland RDF
+toolkit. The Data (RDF) and code (shared library) functionality in
+SLV2 is strictly separated so it is simple to control where each is
+used (e.g. it is possible to discover/investigate plugins and related
+data without loading any shared libraries, avoiding the associated
+risks)
 
 %package devel
 Summary:	Header files for lv2 library
