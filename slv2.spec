@@ -1,4 +1,3 @@
-# TODO: use __cc and optflags
 Summary:	LV2 host library to make LV2 plugin use as simple as possible
 Summary(pl.UTF-8):	Biblioteka hosta LV2 ułatwiająca korzystanie z wtyczek LV2
 Name:		slv2
@@ -41,6 +40,7 @@ Summary:	Header files for SLV2 library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki SLV2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	redland-devel >= 1.0.6
 
 %description devel
 Header files for SLV2 library.
@@ -77,12 +77,15 @@ sed -i 's|/lib/|/%{_lib}/|g' src/world.c
 sed -i "s|/lib'|/%{_lib}'|" autowaf.py
 
 %build
+CC="%{__cc}" \
+CFLAGS="%{rpmcflags}" \
 ./waf configure \
 	--prefix=%{_prefix} \
 	--libdir=%{_libdir} \
 	--htmldir=%{_docdir}/%{name}-apidocs-%{version} \
 	--build-docs \
 	--strict
+
 ./waf -v
 
 %install
