@@ -1,0 +1,11 @@
+diff -urN slv2-0.6.6/wscript slv2-0.6.6.new//wscript
+--- slv2-0.6.6/wscript	2009-05-26 05:44:51.000000000 +0200
++++ slv2-0.6.6.new//wscript	2011-02-19 20:34:41.807662366 +0100
+@@ -96,6 +96,7 @@
+ 	obj.target       = 'slv2'
+ 	obj.vnum         = SLV2_LIB_VERSION
+ 	obj.install_path = '${LIBDIR}'
++	obj.lib          = 'dl'
+ 	autowaf.use_lib(bld, obj, 'REDLAND LV2CORE')
+ 
+ 	# Static library (for unit test code coverage)
