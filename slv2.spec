@@ -42,6 +42,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki SLV2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	redland-devel >= 1.0.6
+Requires:	lv2core-devel >= 1.0
 
 %description devel
 Header files for SLV2 library.
