@@ -2,7 +2,7 @@ Summary:	LV2 host library to make LV2 plugin use as simple as possible
 Summary(pl.UTF-8):	Biblioteka hosta LV2 ułatwiająca korzystanie z wtyczek LV2
 Name:		slv2
 Version:	0.6.6
-Release:	5
+Release:	6
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://download.drobilla.net/%{name}-%{version}.tar.bz2
