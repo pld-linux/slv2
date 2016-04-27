@@ -2,7 +2,7 @@ Summary:	LV2 host library to make LV2 plugin use as simple as possible
 Summary(pl.UTF-8):	Biblioteka hosta LV2 ułatwiająca korzystanie z wtyczek LV2
 Name:		slv2
 Version:	0.6.6
-Release:	7
+Release:	8
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://download.drobilla.net/%{name}-%{version}.tar.bz2
@@ -43,8 +43,8 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki SLV2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libraptor2-devel >= 2.0
-Requires:	redland-devel >= 1.0.13
 Requires:	lv2core-devel >= 1.0
+Requires:	redland-devel >= 1.0.13
 
 %description devel
 Header files for SLV2 library.
@@ -68,6 +68,9 @@ Narzędzia LV2.
 Summary:	SLV2 API documentation
 Summary(pl.UTF-8):	Dokumentacja API SLV2
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 Documetation for SLV2 API in HTML format.
