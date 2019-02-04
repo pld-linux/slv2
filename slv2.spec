@@ -2,17 +2,18 @@ Summary:	LV2 host library to make LV2 plugin use as simple as possible
 Summary(pl.UTF-8):	Biblioteka hosta LV2 ułatwiająca korzystanie z wtyczek LV2
 Name:		slv2
 Version:	0.6.6
-Release:	8
+Release:	9
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://download.drobilla.net/%{name}-%{version}.tar.bz2
 # Source0-md5:	b8e8e0e82dd04324fcd533e8acd1ce85
 Patch0:		link.patch
+Patch1:		lv2core.patch
 URL:		http://drobilla.net/software/slv2/
 BuildRequires:	doxygen
 BuildRequires:	jack-audio-connection-kit-devel >= 0.107.0
 BuildRequires:	libraptor2-devel >= 2.0
-BuildRequires:	lv2core-devel >= 1.0
+BuildRequires:	lv2-devel >= 1.16
 BuildRequires:	pkgconfig
 BuildRequires:	python
 BuildRequires:	python-modules
@@ -43,7 +44,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki SLV2
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libraptor2-devel >= 2.0
-Requires:	lv2core-devel >= 1.0
+Requires:	lv2-devel >= 1.16
 Requires:	redland-devel >= 1.0.13
 
 %description devel
@@ -81,6 +82,7 @@ Dokumentacja API SLV2 w formacie HTML.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 sed -i 's|/lib/|/%{_lib}/|g' src/world.c
 sed -i "s|/lib'|/%{_lib}'|" autowaf.py
 

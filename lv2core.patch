@@ -1,0 +1,12 @@
+diff -dur slv2-0.6.6.orig/wscript slv2-0.6.6/wscript
+--- slv2-0.6.6.orig/wscript	2019-02-04 10:25:37.000000000 +0100
++++ slv2-0.6.6/wscript	2019-02-04 10:26:05.000000000 +0100
+@@ -48,7 +48,7 @@
+ def configure(conf):
+ 	autowaf.configure(conf)
+ 	autowaf.check_tool(conf, 'compiler_cc')
+-	autowaf.check_pkg(conf, 'lv2core', uselib_store='LV2CORE', atleast_version='1.0', mandatory=True)
++	autowaf.check_pkg(conf, 'lv2', uselib_store='LV2CORE', atleast_version='1.0', mandatory=True)
+ 	autowaf.check_pkg(conf, 'redland', uselib_store='REDLAND', atleast_version='1.0.6', mandatory=True)
+ 	autowaf.check_pkg(conf, 'raptor2', uselib_store='RAPTOR', mandatory=True)
+ 	autowaf.check_pkg(conf, 'jack', uselib_store='JACK', atleast_version='0.107.0', mandatory=False)
