@@ -69,9 +69,7 @@ Narzędzia LV2.
 Summary:	SLV2 API documentation
 Summary(pl.UTF-8):	Dokumentacja API SLV2
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 Documetation for SLV2 API in HTML format.
