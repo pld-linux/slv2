@@ -79,8 +79,8 @@ Dokumentacja API SLV2 w formacie HTML.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 sed -i 's|/lib/|/%{_lib}/|g' src/world.c
 sed -i "s|/lib'|/%{_lib}'|" autowaf.py
 
